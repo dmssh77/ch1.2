@@ -90,3 +90,80 @@ print(s.count("SANGTAEYA"))
 print(s.find("SANGTAEYA"))
 print(s.find("SANGTAEYA", 10))
 print(s.rfind("SANGTAEYA"))
+
+# print(s.index("Like"))
+# print(s.rindex("Like"))
+# 발견X -> exception 발생
+
+print(s.startswith("SANTAEYA"))
+print(s.startswith("i like", 2))
+print(s.endswith("Also"))
+print(s.endswith("Java", 0, 26))
+
+# 편집과 치환
+s = '     what the hell      '
+print("---" + s.strip() + "---")
+print("---" + s.rstrip() + "---")
+print("---" + s.lstrip() + "---")
+
+s = "<><abc><><defg><>"
+print("---" + s.strip("<>") + "---")
+
+s = "What the"
+print(s.replace("What", "WHAT"))
+
+# 정렬
+s = "stop no no"
+print(s.center(60))
+print("---" + s.center(30) + "---")
+print("---" + s.ljust(30) + "---")
+print("---" + s.rjust(30) + "---")
+
+# 분리
+s = "one,two,three,four,five,six,seven"
+# r = s.split(",")
+r = s.split(",", 2)
+print(r)
+
+s = ",".join(r)
+print(s)
+
+lines = """first line
+2nd line
+3rd line
+4th line
+"""
+# print("---" + lines + "---")
+
+# r = lines.split("\n")
+# print(r)
+
+r = lines.splitlines()
+print(r)
+
+# 판별
+print("1234".isalpha())
+print("abcd".isalpha())
+
+print("1234".isdigit())
+print("abcd".isdigit())
+
+print("abcdef".islower())
+print("ABCDEF".isupper())
+
+print("".isspace())
+print(" ".isspace())
+
+# 0 채우기
+print(str(1).zfill(5))
+
+# formating ( 서식 )
+# f = "name:{}, age:{}"
+# s = f.format("choi", 29)
+# print(s)
+
+f = "name:{1}, age:{0}"
+s = f.format(29, "choi")
+print(s)
+
+print("name:{}, age:{}".format("choi", 29))
